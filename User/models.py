@@ -11,8 +11,9 @@ class User(models.Model):
         unique_together = (('user_code'),)  # 복합 고유 제약 설정
 
     def __str__(self):
-        return self.id
+        return self.user_code
 
+#
 #class SomeOtherModel(models.Model):
 #    user_code = models.ForeignKey(User, to_field='user_code', on_delete=models.CASCADE)  # 외래키로 user_code 참조
 #    description = models.TextField()
